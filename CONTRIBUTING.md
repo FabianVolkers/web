@@ -19,7 +19,10 @@ We are happy to see your interest in conteributing to the project.
     - [Release](#release)
 - [Pull Requests](#pull-requests)
   - [Preparing your branch](#preparing-your-branch)
+    - [Linting and Style Guides](#linting-and-style-guides)
+    - [Merging a feature branch back into develop after completion](#merging-a-feature-branch-back-into-develop-after-completion)
   - [Areas](#areas)
+
 ## Issues
 
 All development is tracked through GitHub issues in the repository. 
@@ -29,6 +32,7 @@ If this is your first contribution, we encourage you to choose an issue with the
 If you want to work on something that is not yet reflected in an issue, please create one first to discuss the idea with the community. Add as many of the labels below as you see fit.
 
 ### Labels
+
 - bug
 - dependencies
 - documentation
@@ -83,15 +87,31 @@ Branches containing longer term work in progress, that has been started on but w
 `wip/add-camera-tests`
 
 ### Stable branches
+
 #### Develop
+
 #### Main
+
 #### Release
 
 ## Pull Requests
 
 ### Preparing your branch
 
-Merging a feature branch back into develop after completion
+#### Linting and Style Guides
+
+We use eslint and prettier to automagically format our code. ESlint also lints the code for Typescript errors.
+
+```bash
+# From the project root
+# To use eslint run
+npx eslint . --fix --ext .tsx
+
+# To use prettier run
+npx prettier --config .prettierrc.json -w .
+```
+
+#### Merging a feature branch back into develop after completion
 
 ```bash
 # If you haven't already checkout the feature branch (here aptly 
@@ -126,9 +146,12 @@ git push origin feature-branch
 After you have developed your contribution, it is time to create a pull request. Pull requests follow a similar naming scheme to branches, only with different formatting and the omission of the issue number (the pull request will be linked to the issue directly). In addition to the category, please include the area you worked on in the pull request title as well. The areas are separated into the different screens and components used. When working on a whole screen, the screen name as outlined below suffices, when your work is concentrated on a specific part of this screen, please use the part names as outlined below.
 
 Example pull request titles: 
+
 - `[Feature] Controversies: Random Spotlight`
 - `[Bug] Scan: Merkel scanned as Amthor`
+
 ### Areas
+
 - Profile
   - Controversies
   - Biography
